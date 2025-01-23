@@ -1,0 +1,10 @@
+.LinksDiv{
+    gap: 3rem;
+}
+@media screen and (max-width:630px) {
+    .LinksDiv{
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+}

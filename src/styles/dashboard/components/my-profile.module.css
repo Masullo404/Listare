@@ -1,0 +1,28 @@
+.SecondSection>div{
+    width: 50%;
+}
+.EngagedFriends{
+    min-width: 240px;
+}
+@media screen and (max-width:1000px) {
+    .ProfileDiv{
+        min-width: 220px;
+    }
+    .SecondSection{
+        flex-direction: column;
+    }
+    .VerticalLine{
+        display: none;
+    }
+    .SecondSection>div{
+        width: 100%;
+    }
+}
+@media screen and (max-width:560px) {
+    .MainSection{
+        flex-wrap: wrap;
+    }
+    .MainSection > div{
+        flex-grow: 1;
+    }
+}

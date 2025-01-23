@@ -1,0 +1,55 @@
+.AboveText{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 43%;
+    color: white;
+}
+.FirstImageSection{
+    filter: brightness(0.5);
+}
+.FirstSection>div{
+    width: 50%;
+}
+.FirstSectionImage{
+    max-width: 600px;
+}
+.Card{
+    flex: 1 0 80%;
+    max-width: 400px;
+    height: 500px;
+}
+.ContactForm{
+    min-width: 255px;
+    text-align: center;
+}
+@media screen and (max-width:630px) {
+    .AboveText{
+        top: 20%;
+    }
+    .ThirdSection > .AboveText{
+        top: 10%;
+        font-size: 12px;
+    }
+    .FirstSectionBtn{
+        font-size: 12px;   
+    }
+    .FirstImageSection{
+        flex-grow: 1;
+    }
+    .ContactSection{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:580px) {
+    .FirstSection , .FirstSection>div{
+        flex-wrap: wrap;        
+        width: 100%;   
+    }
+    .FAQ{
+        flex-wrap: wrap;
+        font-size: 14px;
+    }
+    
+}

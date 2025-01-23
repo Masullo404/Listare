@@ -1,0 +1,13 @@
+@media screen and (max-width:1300px) {
+    .MyFriends{
+        flex-wrap: wrap;
+    }
+    .MyFriends > div{
+        min-width: 240px;
+    }
+}
+@media screen and (max-width:610px) {
+    .ScodePreview{
+        flex-direction: column;
+    }
+}

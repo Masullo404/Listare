@@ -1,0 +1,43 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+.Layout{
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+.bg-green{
+    background-color: green;
+    color: white;
+}
+.button{
+    text-decoration: none;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 0.75rem;
+    transition: 0.6s;
+}
+.button>a{
+    text-decoration: none;
+    color: inherit;
+}
+.button:hover{
+    background-color: rgb(40, 40, 254);
+    color: white;
+    transition: 0.6s;
+}
+.HIGH{
+    background: #e90f0f;
+    color: #fcb1b1;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+.MEDIUM{
+    background: #e9cc0f;
+    color: #f5f6ad;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+.LOW{
+    background: #0f30e9;
+    color: #ccd1eb;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}

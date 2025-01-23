@@ -1,0 +1,23 @@
+.SearchSection{
+    width: 75%;
+}
+@media screen and (max-width:1000px) {
+    .SearchSection{
+        width: 95%;
+    }
+}
+@media screen and (max-width:830px) {
+    .Lists{
+        width: 100%;
+    }
+    .SearchButton{
+        display: flex;
+        flex-direction: column;
+    }
+    .SearchButton > input{
+        flex-grow: 1;
+    }
+    .SearchSection *{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,22 @@
+.Lists{
+    min-width: 220px;
+}
+.TasksDiv{
+    width: 75%;
+}
+@media screen and (max-width:980px) {
+    .ListsDiv{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:600px) {
+    .Main *{
+        font-size: 12px;
+    }
+    .TasksDiv{
+        width: 90%;
+    }
+    .TasksDiv *{
+        font-size: 9px;
+    }
+}

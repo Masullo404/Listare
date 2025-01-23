@@ -1,0 +1,105 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum situation{
+  FINISHED
+  UNFINISHED
+}
+enum priority{
+  HIGH
+  MEDIUM
+  LOW
+}
+enum permission{
+  VIEWER
+  EDITOR
+}
+
+model user {
+  id  Int @id @default(autoincrement()) 
+  name String?
+  description String 
+  email String? @unique
+  oauth_id String
+  oauth_provider String
+  Scode String @unique @default(uuid())
+  HideProfile Boolean @default(false)
+  img String? 
+  
+  @@unique([oauth_id,oauth_provider])
+
+  lists list[]
+
+  friend friend[] @relation("FriendOne")
+
+  friendTwo friend[] @relation("FriendTwo")
+
+  shareUserOne share[] @relation("UserOne")
+  shareUserTwo share[] @relation("UserTwo")
+}
+
+model list{
+  id Int @id @default(autoincrement())
+  userId Int 
+  name String  
+  Deadline String
+  priority priority
+  tags String
+  CreatedAt DateTime @default(now())
+  Finished Boolean @default(false)
+
+  @@unique([name,userId])
+
+  user user @relation(fields: [userId],references: [id])
+  
+  tasks task[]
+
+  share share[]
+} 
+
+model task{
+  userId Int
+  name String
+  situation situation
+  CreatedAt DateTime @default(now())
+  @@id([name,userId])
+
+  listId Int
+  
+  list list @relation(fields: [listId],references: [id])
+
+}
+
+
+model friend{
+  friendOne Int
+  friendOneRelation user @relation("FriendOne",fields: [friendOne],references: [id])
+  friendTwo Int
+  friendTwoRelation user @relation("FriendTwo",fields: [friendTwo],references: [id])
+
+  @@id([friendOne,friendTwo])
+}
+
+model share{
+  userOneId Int 
+  userOne user @relation("UserOne",fields: [userOneId],references: [id])
+  userTwoId Int
+  userTwo user @relation("UserTwo",fields: [userTwoId],references: [id])
+  listId  Int
+  list list @relation(fields: [listId],references: [id])
+  permission permission
+
+  @@id([userOneId,userTwoId,listId])
+}

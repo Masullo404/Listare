@@ -1,0 +1,16 @@
+@media screen and (max-width:900px) {
+    .ListFriendSection{
+        gap: 3rem;
+        width: 100%;
+    }
+    .ShareListMain{
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    }
+}
+@media screen and (max-width:670px) {
+    .ListFriendSection{
+        flex-direction: column;
+    }
+}
