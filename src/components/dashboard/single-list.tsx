@@ -118,8 +118,8 @@ export  function SingleListComponent(){
             <section className={"d-flex flex-column align-items-center gap-3 w-100 "+style.Main}>
                 <nav aria-label="breadcrumb" className="align-self-start p-3">
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="/dashboard">DashBoard</a></li>
-                        <li className="breadcrumb-item"><a href="/dashboard/lists">Lists</a></li>
+                        <li className="breadcrumb-item"><Link href="/dashboard">DashBoard</Link></li>
+                        <li className="breadcrumb-item"><Link href="/dashboard/lists">Lists</Link></li>
                         <li className="breadcrumb-item active" aria-current="page">{list?.name}</li>
                     </ol>
                 </nav>

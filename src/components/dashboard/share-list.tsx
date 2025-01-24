@@ -152,7 +152,7 @@ export function ShareList(){
         </section>
         <div className='d-flex flex-column justify-content-center gap-3'>
                 {
-                selectedFriend && <label htmlFor="permission">Select the {selectedFriend?.name}'s' permission</label>
+                selectedFriend && <label htmlFor="permission">Select the {selectedFriend?.name}&apos;s&apos; permission</label>
                 }
                 <Dropdown>
                         <Dropdown.Toggle variant="success" id="dropdown-basic">

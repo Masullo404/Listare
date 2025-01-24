@@ -1,6 +1,6 @@
 import NewListForm from "@/components/dashboard/new-list-form";
 import SearchLists from "@/components/dashboard/search-lists";
-import { ShareListServer } from "@/components/dashboard/share-list-";
+import { ShareListServer } from "@/components/dashboard/share-list";
 import SideBar from "@/components/layout/sideBar";
 
 

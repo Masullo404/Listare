@@ -30,7 +30,7 @@ export default async function Home(){
             <section className={"d-flex justify-content-center gap-5 p-3 mt-2 "+styles.FirstSection}>
                 <div className="d-flex flex-column justify-content-center ">
                     <p className="h3 text-center">Listare makes your more productive</p>
-                    <p className="text-center">Using Listare, you're going to become highly productive, organized and focused. It is easy to use and totally customizable!</p>
+                    <p className="text-center">Using Listare, you&apos;re going to become highly productive, organized and focused. It is easy to use and totally customizable!</p>
                     <button type="button" className={"button bg-green w-25 align-self-center "+styles.FirstSectionBtn}><Link href={"/signin"}>Give it a try!</Link></button>
                 </div>
                 <div>
@@ -104,7 +104,7 @@ export default async function Home(){
                             , and providing clear tracking and insights—all in one tool.</p>
                     </div>
                     <div className={" text-center shadow w-50 p-4"}>
-                        <p className="h4">What's the difference between Listare and any other task management app?</p>
+                        <p className="h4">What&apos;s the difference between Listare and any other task management app?</p>
                         <p>Listare is a unique option in the web, it provides you a completely easy-to-use platform with several useful funcionalities just in order
                             to make you have the best experience ever!
                         </p>
@@ -112,14 +112,14 @@ export default async function Home(){
                 </div>
                 <div className={"d-flex justify-content-center w-100 gap-5 mt-5 "+styles.FAQ}>
                     <div className={" text-center shadow rounded w-50 p-4"}>
-                        <p className="h4">Does it work for a team's productivity?</p>
-                        <p>Yes, it does! It works even better when there's a group using it, with a team along with you Listare provides 
+                        <p className="h4">Does it work for a team&apos;s productivity?</p>
+                        <p>Yes, it does! It works even better when there&apos;s a group using it, with a team along with you Listare provides 
                             a completely new experience, bringing interativity, flexibility and optimization!
                         </p>
                     </div>
                     <div className={" text-center shadow w-50 p-4"}>
                         <p className="h4">Is there a mobile app available for managing my tasks on the go?</p>
-                        <p>Unfortunately there's no mobile application for Listare yet. However Listare provides you an incredible online platform that you
+                        <p>Unfortunately there&apos;s no mobile application for Listare yet. However Listare provides you an incredible online platform that you
                             can access from anywhere as long as you have internet and a eletronic device connected to it.
                         </p>
                     </div>
