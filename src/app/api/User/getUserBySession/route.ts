@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import prisma from "@/db/database";
 import { getServerSession } from "next-auth";
 import options from "../../auth/[...nextauth]/options";
-import {  Session } from "next-auth"
 
 export async function GET() {
     try{
@@ -24,22 +23,3 @@ export async function GET() {
     }
 }
 
-export async function GetUserBySessionClient() {
-    const session = await getServerSession(options)
-    if(!session) return null
-    const user = await prisma.user.findUnique({
-        where:{
-            email:String(session.user.email)
-        }
-    })
-    return user
-}
-export async function GetUserBySessionServer(session:Session){
-    if(!session) return null
-    const user = await prisma.user.findUnique({
-        where:{
-            email:String(session.user.email)
-        }
-    })
-    return user
-}
