@@ -18,7 +18,7 @@ export default async function MyFriends() {
         return(
             <>
                 <div className="alert alert-secondary">
-                    You Don't have friends yet
+                    You Don&apos;t have friends yet
                 </div>
             </>
         )

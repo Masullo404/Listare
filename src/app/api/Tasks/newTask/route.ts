@@ -9,7 +9,7 @@ export async function POST(req:NextRequest) {
         if(!session||!name||!listId) return NextResponse.json(null,{status:400})
         const user = await GetUserBySessionServer(session)
         if(!user) return NextResponse.json(null,{status:400})
-        const newTask = await prisma.task.create({
+        await prisma.task.create({
             data:{
                 name:name,
                 listId:Number(listId),

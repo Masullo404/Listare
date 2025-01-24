@@ -1,7 +1,7 @@
 "use client"
 import { user } from '@prisma/client';
 import { Session } from 'next-auth';
-import React, { FormEvent, useState } from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
@@ -13,7 +13,7 @@ interface EditTaskProps {
 }
 export function MyVerticallyCenteredModal({show,onHide,description,session}:EditTaskProps) {
     const [newDesc,setDesc] = useState<string>(description)
-    function Changedescription(ev:FormEvent){  
+    function Changedescription(){  
       if(newDesc.length < 40){
         alert("Your description must contain at least 40 characthers!")
         return

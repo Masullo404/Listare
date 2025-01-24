@@ -41,7 +41,7 @@ export default async function EndingLists() {
             :
             (
                 <div className="alert alert-danger" role="alert">
-                    You Don't have lists yet.
+                    You Don&apos;t have lists yet.
                 </div>  
             )
             }

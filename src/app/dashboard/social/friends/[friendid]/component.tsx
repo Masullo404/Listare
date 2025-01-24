@@ -3,8 +3,6 @@ import { list, user } from "@prisma/client"
 import { useParams } from "next/navigation"
 import { useEffect, useState } from "react"
 import Image from "next/image"
-
-
 import Link from "next/link"
 import { Session } from "next-auth"
 
@@ -37,7 +35,7 @@ export function SingleFriendPage({session}:{session:Session}) {
         return(
         <main>
             <div className="alert alert-secondary">
-                The user's profile is private, redirecting...
+                The user&apos;s profile is private, redirecting...
             </div>
         </main>
         )
@@ -54,8 +52,8 @@ export function SingleFriendPage({session}:{session:Session}) {
                 <div>
                 <p className="h1 text-center">Shared Lists</p>
                 <div className="w-75 d-flex">
-                    {sharedLists && sharedLists.map(list =>(
-                        <div className="d-flex flex-column gap-3 bg-white p-3 rounded shadow-sm">
+                    {sharedLists && sharedLists.map((list,i) =>(
+                        <div className="d-flex flex-column gap-3 bg-white p-3 rounded shadow-sm" key={i}>
                             <span>{list.name}</span>
                             <span>{list.priority}</span>
                             {list.tags.split(";").slice(0,3).map((tag,index) =>(

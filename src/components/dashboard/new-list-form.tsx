@@ -110,7 +110,7 @@ export default function NewListForm() {
                     </div>
                 </div>
                 <div className="bg-light p-2 d-flex flex-column justify-content-center align-items-center grow-1">
-                    <label htmlFor="date">Select List's deadline</label>
+                    <label htmlFor="date">Select List&apos;s deadline</label>
                     <input type="date" name="deadline" id="deadline" onChange={(ev)=>setDeadline(ev.target.value)}/>
                 </div>
             </section>

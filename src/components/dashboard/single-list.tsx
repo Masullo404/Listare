@@ -109,7 +109,7 @@ export  function SingleListComponent(){
         (
             <div className="w-100 d-flex justify-content-center align-items-center" style={{height:"80vh"}}>
                 <div className="alert alert-secondary">
-                        This list is no longer open for edits once you've finished it
+                        This list is no longer open for edits once you&apos;ve finished it
                 </div>  
             </div>
         )

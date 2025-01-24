@@ -40,7 +40,7 @@ export default  function NewFriendForm() {
                     <button className="button bg-green" onClick={VerifyUser}>Search</button>
                 </div>
                 <div>
-                    <label htmlFor="Scode" className="me-2">Enter Friend's SCode:</label>
+                    <label htmlFor="Scode" className="me-2">Enter Friend&apos;s SCode:</label>
                     <input type="text" placeholder="e.g: 12132342" className="w-100" value={scode} onChange={(ev)=>setScode(ev.target.value)}/>
                 </div>
             </form>
@@ -51,9 +51,9 @@ export default  function NewFriendForm() {
                         <div className="d-flex flex-column align-items-center">
                             {user.img && <Image src={user.img} width={140} height={140} className="rounded align-self-center"
                             alt="profile image"/>}
-                            <p className="h6">User's name: {user?.name}</p>
+                            <p className="h6">User&apos;s name: {user?.name}</p>
                         </div>
-                        <p className="justify-self-center"> User's description: {user.description}</p>
+                        <p className="justify-self-center"> User&apos;s description: {user.description}</p>
                     </div>
                     <div className="w-100 d-flex justify-content-center">
                         <button className="button bg-green" onClick={AddFriend} >Add Friend</button>
@@ -63,7 +63,7 @@ export default  function NewFriendForm() {
             :
             (
                 <div className="alert alert-secondary m-3">
-                    Enter somebody's SCode and then click search
+                    Enter somebody&apos;s SCode and then click search
                 </div>
             )
             }

@@ -17,7 +17,7 @@ export default async function EngagedFriends() {
         return(
             <>
                 <div className="alert alert-secondary">
-                    You Don't have any engaged Friend
+                    You Don&apos;t have any engaged Friend
                 </div>
             </>
         )

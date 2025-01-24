@@ -1,4 +1,4 @@
-import EngagedFriends from "@/components/dashboard/social/engajed-friends";
+import EngagedFriends from "@/components/dashboard/social/engaged-friends";
 import MyFriends from "@/components/dashboard/social/my-friends";
 import NewFriendForm from "@/components/dashboard/social/new-friend-form";
 import SideBar from "@/components/layout/sideBar";

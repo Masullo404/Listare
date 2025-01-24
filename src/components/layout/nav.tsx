@@ -4,7 +4,6 @@ import Link from "next/link"
 import styles from "../../styles/nav-footer-styles/nav.module.css"
 import { SignInButton } from "./signInBtn"
 import Image from "next/image"
-import SingOutBtn from "./singOut"
 
 export default async function NAV(){
     const session = await getServerSession(options)
