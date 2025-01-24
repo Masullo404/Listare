@@ -1,7 +1,7 @@
 import prisma from "@/db/database";
 import { priority } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
-import {  GetUserBySessionClient, GetUserBySessionServer } from "../../User/getUserBySession/route";
+import {  GetUserBySessionClient, GetUserBySessionServer } from "../../User/getUserBySession/functions";
 import { Session } from "next-auth";
 
 export async function POST(req:NextRequest) {

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { GetUserBySessionClient } from "../../User/getUserBySession/route";
+import { GetUserBySessionClient } from "../../User/getUserBySession/functions";
 import { priority, user } from "@prisma/client";
 import prisma from "@/db/database";
 

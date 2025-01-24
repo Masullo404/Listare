@@ -1,6 +1,6 @@
 import { Session } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
-import { GetUserBySessionServer } from "../getUserBySession/route";
+import { GetUserBySessionServer } from "../getUserBySession/functions";
 import prisma from "@/db/database";
 import { user } from "@prisma/client";
 

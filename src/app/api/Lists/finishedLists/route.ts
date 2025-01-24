@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Session } from "next-auth";
-import { GetUserBySessionServer } from "../../User/getUserBySession/route";
+import { GetUserBySessionServer } from "../../User/getUserBySession/functions";
 import prisma from "@/db/database";
 
 export async function POST(req:NextRequest) {

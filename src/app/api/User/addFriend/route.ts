@@ -1,6 +1,6 @@
 import prisma from "@/db/database";
 import { NextRequest, NextResponse } from "next/server";
-import { GetUserBySessionClient } from "../getUserBySession/route";
+import { GetUserBySessionClient } from "../getUserBySession/functions";
 
 export async function POST(req:NextRequest) {
     try {

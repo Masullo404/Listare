@@ -1,5 +1,5 @@
 import options from "@/app/api/auth/[...nextauth]/options"
-import { GetUserBySessionServer } from "@/app/api/User/getUserBySession/route"
+import { GetUserBySessionServer } from "@/app/api/User/getUserBySession/functions"
 import { Description } from "@/components/dashboard/profile/change-desc"
 import ChangeVisibility from "@/components/dashboard/profile/change-visibility"
 import SingOutBtn from "@/components/layout/singOut"
