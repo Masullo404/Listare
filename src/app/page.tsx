@@ -6,6 +6,7 @@ import Link from "next/link"
 import { getServerSession } from "next-auth"
 import options from "./api/auth/[...nextauth]/options"
 import { redirect } from "next/navigation"
+import { SignInButton } from "@/components/layout/signInBtn"
 
 export default async function Home(){
     const session = await getServerSession(options)
@@ -23,7 +24,7 @@ export default async function Home(){
                     <h1>Listare</h1>
                     <p>The best tasks manager tool ever! </p>
                     <p>Listare makes everything easy and organized.</p>
-                    <button type="button" className={"button"}><Link href={"/signin"}>Use it now</Link></button>
+                    <SignInButton innerText="Use it now!" styles="button"/>
                 </div>
             </section>
 
@@ -31,7 +32,7 @@ export default async function Home(){
                 <div className="d-flex flex-column justify-content-center ">
                     <p className="h3 text-center">Listare makes your more productive</p>
                     <p className="text-center">Using Listare, you&apos;re going to become highly productive, organized and focused. It is easy to use and totally customizable!</p>
-                    <button type="button" className={"button bg-green w-25 align-self-center "+styles.FirstSectionBtn}><Link href={"/signin"}>Give it a try!</Link></button>
+                    <SignInButton innerText="Give it a try!" styles="bg-green button w-25 align-self-center"/>
                 </div>
                 <div>
                     <Image src={"https://img.freepik.com/free-photo/icon-business-target-project-tasks-list-time_107791-15845.jpg?t=st=1736717748~exp=1736721348~hmac=c600a99e61fedc5cfee435bf51a00bfdca0a964bdb10edbed7d5144dfe343977&w=1060"}
@@ -50,7 +51,7 @@ export default async function Home(){
                         <div className="d-flex flex-column align-items-center justify-content-around h-50 p-3">
                             <p>Tags</p>
                             <p className="text-center">Listare allows you to add tags to your lists, making the process more organized</p>
-                            <button type="button" className={"bg-green button   "}><Link href={"/signin"}>Try it!</Link></button>
+                            <SignInButton innerText="Try it!" styles="button bg-green"/>
                         </div>
                     </div>
                     <div className={"shadow m-2  rounded  "+styles.Card}>
@@ -59,7 +60,7 @@ export default async function Home(){
                         <div className="d-flex flex-column align-items-center justify-content-around h-50 p-3">
                             <p>Priorities</p>
                             <p className="text-center">With Listare you can add priorities to your lists, and even create your owns priorities, making everything more dynamic</p>
-                            <button type="button" className={"bg-green button   "}><Link href={"/signin"}>Try it!</Link></button>
+                            <SignInButton innerText="Try it!" styles="button bg-green"/>
                         </div>
                     </div>
                     <div className={"shadow m-2 rounded "+styles.Card}>
@@ -68,7 +69,7 @@ export default async function Home(){
                         <div className="d-flex flex-column align-items-center justify-content-around h-50 p-3">
                             <p>Shares</p>
                             <p className="text-center">It gives you the opportunity to make friends and share your lists with them, and theirs with you! Creating a funny environment</p>
-                            <button type="button" className={"bg-green button   "}><Link href={"/signin"}>Try it!</Link></button>
+                            <SignInButton innerText="Try it!" styles="button bg-green"/>
                         </div>
                     </div>
                     <div className={"shadow m-2  rounded "+styles.Card}>
@@ -77,7 +78,7 @@ export default async function Home(){
                         <div className="d-flex flex-column align-items-center justify-content-around h-50 p-3">
                             <p>Dates</p>
                             <p className="text-center">Dates are very important, Listare knows it and provides you a simplified and useful dates-list system to make you more productive</p>
-                            <button type="button" className={"bg-green button "}><Link href={"/signin"}>Try it!</Link></button>
+                            <SignInButton innerText="Try it!" styles="button bg-green"/>
                         </div>
                     </div>
                 </div>
@@ -90,7 +91,7 @@ export default async function Home(){
                     <p className="h1">Productive, Organized and Efficient</p>
                     <p>This is what Listare provides you.</p>
                     <p>A whole new way to achieve your goals, and manage your tasks!</p>
-                    <button type="button" className={"button bg-green w-25"}><Link href={"/signin"}>Use it now</Link></button>
+                    <SignInButton innerText="Use it now" styles="button bg-green w-25"/>
                 </div>
             </section>
 

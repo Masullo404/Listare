@@ -50,7 +50,7 @@ export default async function NAV(){
                 </div>
                 <div className="d-flex gap-5 ">
                     <Link href={"/features"} className="text-white text-decoration-none align-self-center" >Features</Link>
-                    <SignInButton />
+                    <SignInButton innerText={"sign In"}/>
                 </div>
             </nav>
             </>

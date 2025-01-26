@@ -1,7 +1,17 @@
 "use client"
 import { signIn } from "next-auth/react"
-export function SignInButton(){
+export function SignInButton({innerText,styles}:{innerText:string,styles?:string}){
     return(
-        <button className="button rounded" onClick={()=>signIn()}>Sign In</button>
+        <>
+        {   (styles)?
+            (
+                <button className={styles} onClick={()=>signIn()}>{innerText}</button>
+            )
+            :
+            (
+                <button className="button rounded" onClick={()=>signIn()}>{innerText}</button>
+            )
+        }
+        </>
     )
 }
