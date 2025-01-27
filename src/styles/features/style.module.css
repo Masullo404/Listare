@@ -1,0 +1,20 @@
+.Divs > div{
+ width: 50%;
+}   
+.OddDivs > div{
+    width: 50%;
+}
+@media screen and (max-width:600px) {
+    .Divs{
+        flex-direction: column;
+    }   
+    .OddDivs{
+        flex-direction: column-reverse;
+    }
+    .Divs > div{
+        width: 100%;
+    }   
+    .OddDivs > div{
+        width: 100%;
+    }   
+}

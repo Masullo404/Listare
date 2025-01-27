@@ -22,6 +22,10 @@
 .ContactForm{
     min-width: 255px;
     text-align: center;
+    align-self: center;
+}
+.FAQ>div{
+    width: 50%;
 }
 @media screen and (max-width:630px) {
     .AboveText{
@@ -40,6 +44,7 @@
     .ContactSection{
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
     }
 }
 @media screen and (max-width:580px) {
@@ -51,5 +56,10 @@
         flex-wrap: wrap;
         font-size: 14px;
     }
-    
+    .FAQ>div{
+        width: 100%;
+    }
+    .FourthSection{
+        width: 100%;
+    }
 }

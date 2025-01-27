@@ -2,6 +2,7 @@ import Link from "next/link"
 import { getServerSession } from "next-auth"
 import options from "@/app/api/auth/[...nextauth]/options"
 import styles from "../../styles/nav-footer-styles/footer.module.css"
+import { SignInButton } from "./signInBtn"
 
 export default async function FOOTER() {
     const session = await getServerSession(options)
@@ -37,7 +38,7 @@ export default async function FOOTER() {
             <div className={"w-50 d-flex justify-content-center align-items-center "+styles.LinksDiv}>
                 <Link href={"/"} className="text-decoration-none text-white">Home</Link>
                 <Link href={"/features"} className="text-decoration-none text-white">features</Link>
-                <button className="button"><Link href={"/signin"}>Sign In</Link></button>
+                <SignInButton innerText="Sign In" styles="button"/>
             </div>
             <div className={"w-50 d-flex justify-content-center gap-5 "+styles}>
                     <a href="" className="text-white"><i className="bi bi-github fs-3"></i></a>

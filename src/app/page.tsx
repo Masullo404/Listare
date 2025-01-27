@@ -98,12 +98,12 @@ export default async function Home(){
             <section className={"p-5 my-5 "+styles.FourthSection}>
                 <p className="h1 text-center mb-5">Main Questions</p>
                 <div className={"d-flex justify-content-center w-100 gap-5 "+styles.FAQ}>
-                    <div className={" text-center shadow rounded w-50 p-4"}>
+                    <div className={" text-center shadow rounded  p-4"}>
                         <p className="h4">How is Listare going increase my productivity?</p>
                         <p>Listare boosts productivity by centralizing tasks, automating workflows, enabling collaboration
                             , and providing clear tracking and insights—all in one tool.</p>
                     </div>
-                    <div className={" text-center shadow w-50 p-4"}>
+                    <div className={" text-center shadow  p-4"}>
                         <p className="h4">What&apos;s the difference between Listare and any other task management app?</p>
                         <p>Listare is a unique option in the web, it provides you a completely easy-to-use platform with several useful funcionalities just in order
                             to make you have the best experience ever!
@@ -111,13 +111,13 @@ export default async function Home(){
                     </div>
                 </div>
                 <div className={"d-flex justify-content-center w-100 gap-5 mt-5 "+styles.FAQ}>
-                    <div className={" text-center shadow rounded w-50 p-4"}>
+                    <div className={" text-center shadow rounded  p-4"}>
                         <p className="h4">Does it work for a team&apos;s productivity?</p>
                         <p>Yes, it does! It works even better when there&apos;s a group using it, with a team along with you Listare provides 
                             a completely new experience, bringing interativity, flexibility and optimization!
                         </p>
                     </div>
-                    <div className={" text-center shadow w-50 p-4"}>
+                    <div className={" text-center shadow  p-4"}>
                         <p className="h4">Is there a mobile app available for managing my tasks on the go?</p>
                         <p>Unfortunately there&apos;s no mobile application for Listare yet. However Listare provides you an incredible online platform that you
                             can access from anywhere as long as you have internet and a eletronic device connected to it.
@@ -129,14 +129,14 @@ export default async function Home(){
                 <div className="d-flex flex-column align-items-center justify-content-start pt-5 ">
                     <p className="h3">Get in touch</p>
                     <p className="text-center w-50">Leave your comment completing the following form, or send a message in our social medias</p>
-                    <ol className="d-flex justify-content-evenly w-100">
+                    <ol className="d-flex justify-content-evenly w-100 p-0">
                         <a href="" className="text-white"><i className="bi bi-github fs-3"></i></a>
                         <a href="" className="text-white"><i className="bi bi-linkedin fs-3"></i></a>
                         <a href="" className="text-white"><i className="bi bi-envelope-at fs-3"></i></a>
                     </ol>
                 </div>
-                <div className={"w-25 "+styles.ContactForm}>
-                    <form className="d-flex flex-column py-5 w-75 gap-1">
+                <div >
+                    <form className={"d-flex flex-column py-5  gap-1 "+styles.ContactForm}>
                         <label htmlFor="name">Name</label>
                         <input type="text" name="name" id="name" placeholder="Your name" className="rounded" />
                         <label htmlFor="">Comment</label>
