@@ -15,10 +15,10 @@ export default async function Home(){
     }
     return(
         <>
-            <NAV/>
+            <NAV/>  
             <section className="position-relative ">
-                <img src="https://img.freepik.com/free-photo/weekly-plan-clipboard-cup-coffee-wooden-desk_23-2147898418.jpg?t=st=1736711213~exp=1736714813~hmac=d70dca8410eb6ca31e5bff2a8235b24c76a3ecdb0ee6c1048bfcaab1b96132a8&w=1380"
-                alt="Woooden table with a cup" className={"w-100 h-75 img-fluid "+styles.FirstImageSection} />
+                <img src={'/cup_and_table.jpg'}
+                alt="Wooden table with a cup" className={"w-100 h-75 img-fluid "+styles.FirstImageSection} />
                 <div className={styles.AboveText}>
                     <h1>Listare</h1>
                     <p>The best tasks manager tool ever! </p>
@@ -84,7 +84,7 @@ export default async function Home(){
             </section>
             
             <section className={"position-relative my-5 "+styles.ThirdSection}>
-                <img src="https://img.freepik.com/free-photo/close-up-still-life-hard-exams_23-2149314078.jpg?t=st=1736792019~exp=1736795619~hmac=fd69c972e1b988a5c2052b1998be2df490f79ddb74346e0ca91bbd76d03d1446&w=1380"
+                <img src="/close-up-still-life-hard-exams_23-2149314078.jpg"
                 className={"w-100 "+styles.FirstImageSection} alt="person working on an desk" />
                 <div className={styles.AboveText+" d-flex flex-column align-items-center"}>
                     <p className="h1">Productive, Organized and Efficient</p>
