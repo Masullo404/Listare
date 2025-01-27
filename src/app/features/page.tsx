@@ -28,7 +28,7 @@ export default function Features(){
                     </div>
                     <div className="align-content-center text-center p-5">
                         <p className="h1">Priorities</p>
-                        <p>Using listare you'll be able to custmize your lists based
+                        <p>Using listare you&apos;ll be able to custmize your lists based
                         on priorities, it makes your workflow more dynamic and organized, leading you to a great experience</p>
                     </div>
                 </section>
