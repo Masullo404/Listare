@@ -10,6 +10,7 @@ export async function GetUserBySessionClient() {
             email:String(session.user.email)
         }
     })
+    if(!user) return null
     return user
 }
 export async function GetUserBySessionServer(session:Session){
@@ -19,5 +20,6 @@ export async function GetUserBySessionServer(session:Session){
             email:String(session.user.email)
         }
     })
+    if(!user) return null
     return user
 }
