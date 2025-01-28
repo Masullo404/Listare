@@ -4,14 +4,12 @@ import { NextRequest, NextResponse } from "next/server"
 export async function middleware(req:NextRequest) {
     try{
         if(req.nextUrl.pathname.includes('/dashboard')){
-            setTimeout(async()=>{
-                const token = await getToken({req,secret:process.env.JWT_SECRET})
-                if(!token){
-                    console.log("redirecting")
-                    return NextResponse.redirect(new URL('/api/auth/signin',req.url))
-                }
-                return NextResponse.next()
-            },500)
+            const token = await getToken({req,secret:process.env.JWT_SECRET})
+            if(!token){
+                console.log("redirecting")
+                return NextResponse.redirect(new URL('/api/auth/signin',req.url))
+            }
+            return NextResponse.next()
         }
     }catch(err){
         console.log(err)

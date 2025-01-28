@@ -99,18 +99,30 @@ export default async function Profile() {
                 <div className="w-75">
                     <p className="text-center h2">Recent Finished Lists</p>
                     <div className={"d-flex justify-content-center gap-2 flex-wrap"}>
-                        { recentLists && recentLists.slice(0,3).map(list =>(
-                            <div key={list.id} className="d-flex flex-column bg-white rounded p-3">
-                                <p className="h3">{list.name}</p>
-                                <span className={list.priority}>{list.priority}</span>
-                                { list.tags.split(';').map((tag,index)=>(
-                                    <span key={index} className="bg-primary p-1 rounded m-2 text-white">{tag}</span>
-                                ))
-                                }
-                                <p className="h6">Ending at:{list.Deadline}</p>
-                                <Link href={`/dashboard/lists/${list.id}`}><button className="bg-green button">See List</button></Link>
-                            </div>
-                        ))}
+                        {
+                            (recentLists.length > 0)?
+                            (
+                                recentLists.slice(0,3).map(list =>(
+                                   <div key={list.id} className="d-flex flex-column bg-white rounded p-3">
+                                       <p className="h3">{list.name}</p>
+                                       <span className={list.priority}>{list.priority}</span>
+                                       { list.tags.split(';').map((tag,index)=>(
+                                           <span key={index} className="bg-primary p-1 rounded m-2 text-white">{tag}</span>
+                                       ))
+                                       }
+                                       <p className="h6">Ending at:{list.Deadline}</p>
+                                       <Link href={`/dashboard/lists/${list.id}`}><button className="bg-green button">See List</button></Link>
+                                   </div>
+                               ))
+
+                            )
+                            :
+                            (
+                                <div className="alert alert-secondary">
+                                    You haven&apos;t finished any lists yet.
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
             </section>
@@ -158,14 +170,24 @@ export default async function Profile() {
                 <div>
                     <p className="h2">Engaged Friends</p>
                     <div className="d-flex flex-wrap">
-                        {engagedFriends && engagedFriends.slice(0,3).map(friend =>(
-                        <div className={"d-flex flex-column bg-white rounded p-5 gap-1 "+styles.EngagedFriends} key={friend.id}>
-                            {friend.img && <Image src={friend.img} width={140} height={140} alt="profile image"
-                            className="rounded"/>}
-                            <p>{friend.name}</p>
-                            <span>{friend.description}</span>
-                        </div>
-                        ))}
+                        {(engagedFriends.length > 0)?
+                        (
+                            engagedFriends.slice(0,3).map(friend =>(
+                            <div className={"d-flex flex-column bg-white rounded p-5 gap-1 "+styles.EngagedFriends} key={friend.id}>
+                                {friend.img && <Image src={friend.img} width={140} height={140} alt="profile image"
+                                className="rounded"/>}
+                                <p>{friend.name}</p>
+                                <span>{friend.description}</span>
+                            </div>
+                            ))
+                        )
+                        :
+                        (
+                            <div className="alert alert-secondary"> 
+                                You haven&apos;t shared lists with anybody and nobody has shared lists with you
+                            </div>
+                        )
+                        }
                     </div>
                 </div>
             </section>
