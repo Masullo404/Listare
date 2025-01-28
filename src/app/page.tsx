@@ -10,7 +10,6 @@ import { SignInButton } from "@/components/layout/signInBtn"
 export default async function Home(){
     const session = await getServerSession(options)
     if(session) {
-        const url = process.env.NEXTAUTH_URL
         return redirect('/dashboard')
     }
     return(
