@@ -1,13 +1,12 @@
+import { getToken } from "next-auth/jwt"
 import { NextRequest, NextResponse } from "next/server"
 
 export async function middleware(req:NextRequest) {
     try{
         if(req.nextUrl.pathname.includes('/dashboard')){
             setTimeout(async()=>{
-                const url = process.env.NEXTAUTH_URL
-                const sessionResponse = await fetch(url+'/api/User/getUserBySession')
-                const authenticatedUser = await sessionResponse.json()
-                if(!authenticatedUser){
+                const token = await getToken({req,secret:process.env.JWT_SECRET})
+                if(!token){
                     console.log("redirecting")
                     return NextResponse.redirect(new URL('/api/auth/signin',req.url))
                 }
