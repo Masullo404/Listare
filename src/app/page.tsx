@@ -4,7 +4,7 @@ import Image from "next/image"
 import styles from "../styles/homepage/styles.module.css"
 import { getServerSession } from "next-auth"
 import options from "./api/auth/[...nextauth]/options"
-import { redirect, RedirectType } from "next/navigation"
+import { redirect } from "next/navigation"
 import { SignInButton } from "@/components/layout/signInBtn"
 
 export default async function Home(){
