@@ -4,14 +4,14 @@ import Image from "next/image"
 import styles from "../styles/homepage/styles.module.css"
 import { getServerSession } from "next-auth"
 import options from "./api/auth/[...nextauth]/options"
-import { redirect } from "next/navigation"
+import { redirect, RedirectType } from "next/navigation"
 import { SignInButton } from "@/components/layout/signInBtn"
 
 export default async function Home(){
     const session = await getServerSession(options)
     if(session) {
         const url = process.env.NEXTAUTH_URL
-        return redirect(url+'/dashboard')
+        return redirect('/dashboard')
     }
     return(
         <>

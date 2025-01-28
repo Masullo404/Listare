@@ -10,7 +10,7 @@ export async function middleware(req:NextRequest) {
         return NextResponse.next()
     }catch(err){
         console.log(err)
-        return NextResponse.redirect(new URL("api/auth/signin",req.url))
+        return NextResponse.redirect(new URL("/api/auth/signin",req.url))
     }
 }
 
