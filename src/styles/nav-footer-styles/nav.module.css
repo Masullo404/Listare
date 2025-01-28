@@ -2,3 +2,17 @@
     background-color: green;
     color: white;
 }
+.CentralLinks{
+    display: flex;
+}
+.OffcanvasBtn{
+    display: none;
+}
+@media screen and (max-width:500px) {
+    .OffcanvasBtn{
+        display: inline;
+    }
+    .NavLinks{
+        display: none;
+    }
+}

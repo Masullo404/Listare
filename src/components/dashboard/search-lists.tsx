@@ -87,7 +87,7 @@ export default  function SearchLists(){
             </form>
         </div>
         <div className="d-flex flex-column align-items-center w-100">
-            <form action="" className={"w-75 "+styles.SearchButton}>
+            <form className={"w-75 "+styles.SearchButton}>
                 <input type="text" placeholder="search a list by name"  
                 onChange={(ev)=>SetName(ev.target.value)}/>
                 <button className="button bg-green " type="submit" onClick={Search}>Search</button>

@@ -11,6 +11,18 @@ import { ProgressBar } from "react-bootstrap"
 import styles from "../../../styles/dashboard/components/my-profile.module.css"
 
 export default async function Profile() {
+    function ErrorHandler(){
+        return(
+            <>
+            <div className="d-flex align-items-center justify-content-center" style={{height:"80vh"}}>
+                <div className="alert alert-danger w-25">
+                    An Error Ocurred, please try again later
+                </div>
+            </div>
+            </>
+        )
+    }
+
     const url = process.env.NEXTAUTH_URL
     const session = await getServerSession(options)
     if(!session) return (
@@ -25,6 +37,7 @@ export default async function Profile() {
         },
         body:JSON.stringify({session:session})
     })
+    if(!finishedListsResponse.ok) ErrorHandler()
     const finishedList:list[] = await finishedListsResponse.json()
 
     const friendsResponse = await fetch(url+"/api/User/friends",{
@@ -34,6 +47,7 @@ export default async function Profile() {
         },
         body:JSON.stringify({session:session})
     })
+    if(!friendsResponse.ok) ErrorHandler()
     const friends:user[] = await friendsResponse.json()
 
     const user = await GetUserBySessionServer(session)
@@ -44,6 +58,7 @@ export default async function Profile() {
         },
         body:JSON.stringify({session:session})
     })   
+    if(!recentResponse.ok) ErrorHandler()
     const recentLists:list[] = await recentResponse.json()
 
     const engagedResponse = await fetch(url+"/api/User/engagedFriends",{
@@ -53,6 +68,7 @@ export default async function Profile() {
         },
         body:JSON.stringify({session:session})
     })
+    if(!engagedResponse.ok) ErrorHandler()
     const engagedFriends:user[] = await engagedResponse.json()
 
     return(

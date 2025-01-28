@@ -1,6 +1,10 @@
 .AddTagBtn>button{
  width: 25%;       
 }
+.OptionsDivs > div {
+    max-width: 100%;
+    flex-grow: 1;
+}
 @media screen and (max-width:1000px) {
     .AddTagBtn>button{
         width: 75%;

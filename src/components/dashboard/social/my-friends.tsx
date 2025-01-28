@@ -17,27 +17,47 @@ export default async function MyFriends() {
     if(!response.ok){
         return(
             <>
-                <div className="alert alert-secondary">
-                    You Don&apos;t have friends yet
-                </div>
+                <p className="text-center p-2 h1">My Friends</p>
+                <section className="w-75 bg-white rounded p-5">
+                    <div className="alert alert-secondary">
+                        You Don&apos;t have friends yet
+                    </div>
+                </section>
             </>
         )
     }
     const friends:user[] = await response.json()
     return(
         <>
-        <p className="text-center h1">My Friends</p>
-        <div className={"bg-white d-flex p-3 rounded w-75 "+styles.MyFriends}>
-            { friends && friends.map(friend => (
-                <div className={"d-flex flex-column bg-light rounded align-items-center gap-1 p-5 "} key={friend.id}>
-                    {friend.img && <Image src={friend.img} width={140} height={140} alt="profile image"
-                    className="rounded"/>}
-                    <p>{friend.name}</p>
+        {(friends.length > 0)?
+        (
+        <>
+            <p className="text-center h1">My Friends</p>
+            <div className={"bg-white d-flex p-3 rounded w-75 "+styles.MyFriends}>
+                { friends && friends.map(friend => (
+                    <div className={"d-flex flex-column bg-light rounded align-items-center gap-1 p-5 "} key={friend.id}>
+                        {friend.img && <Image src={friend.img} width={140} height={140} alt="profile image"
+                        className="rounded"/>}
+                        <p>{friend.name}</p>
 
-                    <span>{friend.description}</span>
-                </div>
-            ))}
-        </div>        
+                        <span>{friend.description}</span>
+                    </div>
+                ))}
+            </div>        
+        </>
+        )
+        :
+        (
+            <>
+                <p className="text-center p-2 h1">My Friends</p>
+                <section className="w-75 bg-white rounded p-5">
+                    <div className="alert alert-secondary">
+                        You Don&apos;t have friends yet
+                    </div>
+                </section>
+            </>
+        )
+        }
         </>
     )
 }

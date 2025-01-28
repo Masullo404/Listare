@@ -4,6 +4,7 @@ import Link from "next/link"
 import styles from "../../styles/nav-footer-styles/nav.module.css"
 import { SignInButton } from "./signInBtn"
 import Image from "next/image"
+import OffCanvasMenuBtn from "./canvas-menu-btn"
 
 export default async function NAV(){
     const session = await getServerSession(options)
@@ -14,13 +15,13 @@ export default async function NAV(){
             <>
             <nav className={"d-flex justify-content-between align-items-center p-4 "+styles.nav}>
                 <div>
-                    <Link href={"/dashboard"} className="h1 text-decoration-none text-white" >Listare</Link>
+                    <Link href={"/dashboard"} className="h1 text-decoration-none text-white">Listare</Link>
                 </div>
-                <div className="d-flex justify-content-center gap-5 fs-5">
+                <div className={styles.CentralLinks+" justify-content-center gap-5 fs-5 "+styles.NavLinks}>
                     <Link href={"/dashboard/lists"} className="text-decoration-none text-white">Lists</Link>
                     <Link href={"/dashboard/social"} className="text-decoration-none text-white">Social</Link>
                 </div>
-                <div>
+                <div className={styles.NavLinks}>
                     {(session.user?.image)?
                     (
                         <Link href={"/dashboard/profile"} className="text-decoration-none">
@@ -37,6 +38,9 @@ export default async function NAV(){
                         <Link href={"/dashboard"}><i className="bi bi-person-fill"></i>My Profile</Link>
                     )
                     }
+                </div>
+                <div className={styles.OffcanvasBtn}>
+                    <OffCanvasMenuBtn />
                 </div>
             </nav>
             </>

@@ -82,9 +82,20 @@ export function ShareList(){
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    { lists && lists.map(list => (
-                        <Dropdown.Item onClick={()=>setSelectList(list)} key={list.id}>{list.name}</Dropdown.Item>
-                    ))}
+                    {lists && (lists.length > 0)?
+                    (
+                        lists && lists.map(list => (
+                            <Dropdown.Item onClick={()=>setSelectList(list)} key={list.id}>{list.name}</Dropdown.Item>
+                        ))
+
+                    )
+                    :
+                    (
+                        <div className='alert alert-secondary'>
+                            You Don&apos;t have any list yet
+                        </div>
+                    )
+                    }
                 </Dropdown.Menu>
                 </Dropdown>
                 </div>
@@ -125,14 +136,24 @@ export function ShareList(){
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            { friends && friends.map(friend => (
-                                <Dropdown.Item onClick={()=>setSelectFriend(friend)} key={friend.id}>{friend.name}</Dropdown.Item>
-                            ))}
+                            {  friends && (friends.length > 0)?
+                            (
+                                friends && friends.map(friend => (
+                                    <Dropdown.Item onClick={()=>setSelectFriend(friend)} key={friend.id}>{friend.name}</Dropdown.Item>
+                                ))
+                            )
+                            :
+                            (
+                                <div className='alert alert-secondary'> 
+                                    You Don&apos;t have friends
+                                </div>
+                            )
+                        }
                         </Dropdown.Menu>
                     </Dropdown>
                 </div>
                 <div>
-                    {  (selectedFriend)?
+                    {(selectedFriend)?
                     (
                         <>
                         <span>Selected Friend:</span>

@@ -1,6 +1,14 @@
 .SearchSection{
     width: 75%;
 }
+@media screen and (min-width:830px) {
+    .SearchButton > input{
+        width: 75%;
+    }
+    .SearchButton > button{
+        width: 25%;
+    }
+}
 @media screen and (max-width:1000px) {
     .SearchSection{
         width: 95%;
