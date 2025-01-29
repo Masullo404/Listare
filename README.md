@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Listare
+Listare is a personal tasks management web application, developed in order to help workers with their appointments.
+It has a system based in lists and every lists has multiple tasks, where you can edit, conclude and delete them.
+In it's main features we have:
+1. Shares : The main part that allows the user to work with team of people. You can share your list with your freinds.
+2. Advanced Search : You can search your lists based on the name, tags, priority and even the if they're shared or not.
+3. Achievements : Based in how many lists you have finished it gives you user achivements.
 
-## Getting Started
+## Used Technologies 
+The ued technologies are:
+1. React , V: 19.0.0
+2. NextJs , V: 15.1.4
+3. PostgresSql, V: 17
+4. Prisma ORM, V: 6.2.1
+5. TypeScript, V: 5
+6. Next Auth, V: 4.24.11
+7. Bootstrap and react Bootstrap, V: 5.3.3 , V: 2.10.7
 
-First, run the development server:
+### Installing the project
+In order to install the project in your machine you need to firstly clone the repostitory using the command: 
+> git clone https://github.com/Masullo404/Listare
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+After it, you change your directory to the main project's folder with the command: 
+>cd ./listare
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+So, once in the right directory you install all the dependencies typing:
+>npm install
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Therefore, you need to set up your database installing the postgres, and them running the command 
+> npx prisma init
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Then create the `.env` in the root of your application, in this file you're going to set up the database connection with the application name and your password, to see detailed information about it see in the prisma docs: https://www.prisma.io/docs/accelerate/getting-started 
 
-## Learn More
+After having the database ready, now you should set up all the enviroment variables, first create the `.env.local` file in the root directory of your project:
+- NEXTAUTH_SECRET: this is your secret key for next Auth, create it using the command `openssl rand -base64 32` in your GIT BASH terminal.
+- NEXTAUTH_URL: in order to run the project locally the defaul is goingo to be `http://localhost:3000`
+- JWT_SECRET: your secret JSON WEB TOKEN key, for this one you can also use the same command as the NEXTAUTH_SECRET
 
-To learn more about Next.js, take a look at the following resources:
+Finally, to make the oauth works, you must configure the GOOGLE keys and GITHUB KEYS. 
+### Generating Google and GitHub API Keys
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Google API Keys
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Access Google Cloud Console**:
 
-## Deploy on Vercel
+   - Visit [Google Cloud Console](https://console.cloud.google.com/).
+   - Create a new project if you don’t already have one.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Create Credentials**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   - Go to **APIs & Services > Credentials**.
+   - Click **Create Credentials** and select **OAuth Client ID**.
+   - Configure the redirect URIs and save.
+
+3. **Set Environment Variables**:
+
+   - Save the keys the `.env.local` file:
+     ```env.local
+     GOOGLE_ID=<your-client-id>
+     GOOGLE_SECRET=<your-client-secret>
+     ```
+
+#### GitHub API Keys
+
+1. **Access GitHub Developer Settings**:
+
+   - Go to your [GitHub Developer Settings](https://github.com/settings/developers).
+
+2. **Create a New OAuth App**:
+
+   - Under **OAuth Apps**, click **New OAuth App**.
+   - Fill in the required details:
+     - **Application Name**: Name of your app.
+     - **Homepage URL**: Your app’s homepage.
+     - **Authorization Callback URL**: The URL to redirect users after authorization.
+
+3. **Generate Client ID and Secret**:
+
+   - After creating the app, GitHub will provide a **Client ID** and **Client Secret**.
+
+4. **Set Environment Variables**:
+
+   - Save the keys in a `.env.local` file:
+     ```env.local
+     GITHUB_ID=<your-client-id>
+     GITHUB_SECRET=<your-client-secret>
+     ```
+
+- Refer to [Google Cloud Documentation](https://cloud.google.com/docs) and [GitHub Documentation](https://docs.github.com) for detailed instructions or troubleshooting.
