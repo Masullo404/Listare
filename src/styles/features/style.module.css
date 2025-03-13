@@ -1,20 +1,28 @@
-.Divs > div{
- width: 50%;
-}   
-.OddDivs > div{
-    width: 50%;
+.SecondSection{
+    padding: 6rem 0px   ;
 }
-@media screen and (max-width:600px) {
-    .Divs{
-        flex-direction: column;
-    }   
-    .OddDivs{
-        flex-direction: column-reverse;
+@media screen and (max-width:750px) {
+    .FirstSection{
+        padding: 0px !important;
     }
-    .Divs > div{
-        width: 100%;
+    .FirstSection >div{
+        flex-direction: column;
+    }    
+    .FirstSection > div > *{
+        width: 90% !important;
     }   
-    .OddDivs > div{
-        width: 100%;
-    }   
+    .SecondSection > div {
+        padding: 0px !important;
+    }
+    .SecondSection > div > div{
+        flex-direction: column;
+        align-items: center;
+    }
+    .SecondSection > div > div img{
+        width: 100% !important;
+    }
+    .Title{
+        font-size: 30px !important;
+    }
+    
 }

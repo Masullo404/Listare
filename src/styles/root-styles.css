@@ -1,11 +1,10 @@
-@import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 .Layout{
-    font-family: 'Poppins';
+    font-family: var('--font-poppins');
     font-weight: 400;
 }
 .bg-green{
-    background-color: green;
-    color: white;
+    background-color: green !important;
+    color: white !important;
 }
 .button{
     text-decoration: none;

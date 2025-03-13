@@ -15,7 +15,7 @@ export default async function NAV(){
             <>
             <nav className={"d-flex justify-content-between align-items-center p-4 "+styles.nav}>
                 <div>
-                    <Link href={"/dashboard"} className="h1 text-decoration-none text-white">Listare</Link>
+                    <p className={styles.Logo}>Listare</p>
                 </div>
                 <div className={styles.CentralLinks+" justify-content-center gap-5 fs-5 "+styles.NavLinks}>
                     <Link href={"/dashboard/lists"} className="text-decoration-none text-white">Lists</Link>
@@ -47,17 +47,19 @@ export default async function NAV(){
         )
         :
         (
-            <>
-            <nav className={"d-flex align-items-center justify-content-between p-4 "+styles.nav}>
-                <div>
-                    <Link href={"/"} className="h1 text-white text-decoration-none" >Listare</Link>
-                </div>
-                <div className="d-flex gap-5 ">
-                    <Link href={"/features"} className="text-white text-decoration-none align-self-center" >Features</Link>
-                    <SignInButton innerText={"sign In"}/>
-                </div>
-            </nav>
-            </>
+        <nav className={"d-flex align-items-center justify-content-around p-4 "+styles.nav}>
+            <div>
+                <p className={styles.Logo}>Listare</p>
+            </div>
+            <div className={"d-flex gap-5 "+styles.NavLinks}>
+                <Link href={"/"} className="text-white text-decoration-none align-self-center" >Início</Link>
+                <Link href={"/funcionalidades"} className="text-white text-decoration-none align-self-center" >Funcionalidades</Link>
+                <SignInButton innerText={"Entrar"} styles={styles.SignInButton}/>
+            </div>
+            <div className={styles.OffcanvasBtn}>
+                <OffCanvasMenuBtn />
+            </div>
+        </nav>
         )
         }
         </>

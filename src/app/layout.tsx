@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import "../styles/root-styles.css";
+import "bootstrap/dist/css/bootstrap.css"
 import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+import {Poppins} from "next/font/google"
 
 export const metadata: Metadata = {
   title: "Listare",
-  description: "Your new Tasks Manager App",
+  description: "Seu novo app de gerenciamento de tarefas",
 };
+const googlePoppinsFont = Poppins({
+  variable:"--font-poppins",
+  subsets:["latin"],
+  weight:["400","500","700"]
+})
 
 export default function RootLayout({
   children,
@@ -14,14 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head> 
-        {/* Adding Poppins-Font to the entire site */}
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=''/>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+      <head>
+        <link rel="icon" href="/icon.png" sizes="any" />
       </head>
-      <body className="Layout">
-          {children}
+      <body className={"Layout "+googlePoppinsFont.className}>
+        {children}
       </body>
     </html>
   );
