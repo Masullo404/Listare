@@ -52,3 +52,11 @@
         padding: 1rem 0px;
     }
 }
+@media screen and (max-width:420px) {
+    .LinksDiv{
+        flex-wrap: wrap;
+    }
+    div.MediaIcons{
+        width: 90% !important;
+    }
+}

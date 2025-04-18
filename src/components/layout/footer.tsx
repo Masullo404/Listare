@@ -18,9 +18,9 @@ export default async function FOOTER() {
                     <Link href={"/dashboard/social"} className="text-decoration-none text-white">Social</Link>
                 </div>
                 <div className="w-50 d-flex justify-content-center gap-5">
-                        <a href="#" className="text-white"><i className="bi bi-github fs-3"></i></a>
-                        <a href="#" className="text-white"><i className="bi bi-linkedin fs-3"></i></a>
-                        <a href="#" className="text-white"><i className="bi bi-envelope-at fs-3"></i></a>
+                    <a href="#" className="text-white"><i className="bi bi-github fs-3"></i></a>
+                    <a href="#" className="text-white"><i className="bi bi-linkedin fs-3"></i></a>
+                    <a href="#" className="text-white"><i className="bi bi-envelope-at fs-3"></i></a>
                 </div>
             </div>
             <div className="bg-green">

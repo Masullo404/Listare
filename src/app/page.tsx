@@ -46,7 +46,7 @@ export default async function Home(){
                         <Image src={"https://img.freepik.com/free-vector/deadline-time-management-business-concept_107791-4070.jpg?t=st=1736718820~exp=1736722420~hmac=e3e7dce62626823183af0a1eae327e432f99d45a836260ad655795961f8583ab&w=1380"}
                         className="rounded-top  img-fluid w-100 h-50" height={500} width={500} alt="To-do-list"/>
                         <div className="d-flex flex-column align-items-center justify-content-around h-50 p-3">
-                            <p>Tags</p>
+                            <p className="fs-2">Tags</p>
                             <p className="text-center">Listare permite você adicionar tags para suas listas, fazendo o processo mais organizado e dinâmico</p>
                             <SignInButton innerText="Usar" styles={"bg-green "+styles.SignInButton}/>
                         </div>
@@ -55,7 +55,7 @@ export default async function Home(){
                         <Image src={"https://img.freepik.com/free-photo/calendar-agenda-event-meeting-reminder-schedule-graphic-concept_53876-124859.jpg?t=st=1736721359~exp=1736724959~hmac=c83feb7064fcb25ac617fea3a74d12893fa57072509222a9367c33b4ffe4bbb2&w=1380"}
                         className="h-50 rounded-top  img-fluid w-100" height={500} width={500} alt="To-do-list"/>
                         <div className="d-flex flex-column align-items-center justify-content-around h-50 p-3">
-                            <p>Prioridades</p>
+                            <p className="fs-2">Prioridades</p>
                             <p className="text-center">Com o Listare você pode adicionar prioridades para suas listas, e até mesmo criar suas próprias prioridades 
                             de acordo com o prazo, tornando tudo mais atraente e divertido.</p>
                             <SignInButton innerText="Usar" styles={"bg-green "+styles.SignInButton}/>
@@ -64,8 +64,8 @@ export default async function Home(){
                     <div className={"shadow m-2 rounded "+styles.Card}>
                         <Image src={"https://img.freepik.com/free-vector/social-media-speech-bubbles_53876-89120.jpg?t=st=1736721501~exp=1736725101~hmac=5b5d6c2b2b810bc20e64ed20c3cbaa628d8052e537b644114837b2addf9c16dc&w=1380"}
                         className="h-50 rounded-top  img-fluid w-100" height={500} width={500} alt="To-do-list"/>
-                        <div className="d-flex flex-column align-items-center justify-content-around h-50 p-3">
-                            <p>Comparilhamentos</p>
+                        <div className="d-flex flex-column align-items-center justify-content-around h-auto p-3">
+                            <p className="fs-2">Comparilhamentos</p>
                             <p className="text-center"> Listare te permite compartilhar suas listas com outros usuários, 
                             permitindo a colaboração entre amigos e equipes!</p>
                             <SignInButton innerText="Usar" styles={"bg-green "+styles.SignInButton}/>
@@ -79,7 +79,7 @@ export default async function Home(){
                 className={"w-100 "+styles.ImageFilter} alt="person working on an desk" />
                 <div className={"d-flex flex-column align-items-center position-absolute w-100 top-50 text-white"}>
                     <p className="h1 text-center">Produtivo, Organizado e Eficiente</p>
-                    <p>Uma nova forma de conquistar a produtividade e manejar suas tarefas.</p>
+                    <p className="text-center">Uma nova forma de conquistar a produtividade e manejar suas tarefas.</p>
                     <SignInButton innerText="Use agora" styles={"button bg-green "+styles.SignInButton}/>
                 </div>
             </section>
@@ -117,8 +117,8 @@ export default async function Home(){
                 </div>
             </section>
             <section className={"d-flex justify-content-center text-black p-5 mt-5 bg-light "+styles.ContactSection}>
-                <div className="d-flex flex-column align-items-center justify-content-start pt-5 w-50">
-                    <p className="display-1">Faça contato</p>
+                <div className={"d-flex flex-column align-items-center justify-content-start pt-5 w-50 "+styles.ContactText}>
+                    <p className="display-1"><i>Faça contato</i></p>
                     <p className="fs-5 text-center w-50">Deixe seu comentário preenchendo o formulário abaixo ou envie uma mensagem em nossas redes sociais.</p>
                 </div>
                 <div className="w-50">
